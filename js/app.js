@@ -3,13 +3,22 @@ console.log('funzia?')
 // Chiede un numero all'utente
 let numeroDispari
 
-numeroDispari = parseInt(prompt('Inserisci un numero dispari'))
+let lista = []
 
-while (isNaN(numeroDispari) || (numeroDispari % 2 === 0)) {
+for (i = 0; i < 10; i++) {
+
     numeroDispari = parseInt(prompt('Inserisci un numero dispari'))
+
+    while (isNaN(numeroDispari) || (numeroDispari % 2 === 0)) {
+        numeroDispari = parseInt(prompt('Inserisci un numero dispari'))
+    }
+    lista.push(numeroDispari)
 }
 
-console.log(numeroDispari)
+
+console.log(lista, numeroDispari)
+
+
 
 // Ripetere il ciclo fino al raggiungimento di 10 cifre
 
